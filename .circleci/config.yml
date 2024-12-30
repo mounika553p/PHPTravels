@@ -1,0 +1,43 @@
+version: 2.1
+
+executors:
+  docker:
+    # Use a Docker image that includes Java and Maven for running tests
+    - image: maven:3.8.1-jdk-11
+
+jobs:
+  build:
+    docker:
+      - image: maven:3.8.1-jdk-11  # Use Maven with Java 11 for building your project
+      - image: selenium/standalone-chrome:latest  # Use Selenium standalone container with Chrome
+
+    steps:
+      # Checkout the repository to get the test code
+      - checkout
+
+      # Start Selenium Hub and Chrome node in the background
+      - run:
+          name: Start Selenium Grid with Chrome Node
+          command: |
+            docker run -d -p 4444:4444 --name selenium-hub selenium/hub
+            docker run -d --link selenium-hub:hub selenium/node-chrome
+
+      # Run the Maven tests that use Selenium
+      - run:
+          name: Run Selenium Tests
+          command: mvn clean test  # Adjust this based on your test execution command
+
+      # Optionally, stop the Selenium containers after tests are done
+      - run:
+          name: Stop Selenium containers
+          command: |
+            docker stop selenium-hub
+            docker stop selenium-node-chrome
+            docker rm selenium-hub
+            docker rm selenium-node-chrome
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build

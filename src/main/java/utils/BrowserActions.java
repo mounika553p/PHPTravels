@@ -20,12 +20,12 @@ public class BrowserActions {
         element.sendKeys(text);
     }
 
-    public static void waitUntilElementInvisible(WebElement element){
-        getFluentWait().until(ExpectedConditions.invisibilityOf(element));
-    }
+//    public static void waitUntilElementInvisible(WebElement element){
+//        getFluentWait().until(ExpectedConditions.invisibilityOf(element));
+//    }
 
     public static void waitUntilElementDisplayed(WebElement element){
-        getFluentWait().until(ExpectedConditions.visibilityOf(element));
+        //getFluentWait().until(ExpectedConditions.visibilityOf(element));
     }
 
     public static void selectFromListByIndex(WebElement list, int option) {
@@ -51,7 +51,7 @@ public class BrowserActions {
 
     public static boolean thisElementExists(WebElement element) {
         try {
-            getFluentWait().until(ExpectedConditions.visibilityOf(element));
+            //getFluentWait().until(ExpectedConditions.visibilityOf(element));
             return true;
         }catch(TimeoutException e)
         {

@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 fa32f50a9d652a0b6a527c7d9c79de2417604ba8 MounikaPalla <mpalla553@gmail.com> 1558808542 +0200	branch: Created from HEAD
+fa32f50a9d652a0b6a527c7d9c79de2417604ba8 76bb8da4c1c807f01c1c322d65f5445d81bf5961 MounikaPalla <mpalla553@gmail.com> 1558817163 +0200	commit: add first dummy feature
+76bb8da4c1c807f01c1c322d65f5445d81bf5961 0084326a39a8f57d7074a5220f322bec652b65ad MounikaPalla <mpalla553@gmail.com> 1558872721 +0200	commit: first end to end cucumber test with pages and definitions
+0084326a39a8f57d7074a5220f322bec652b65ad 7899ac1ef73a3706b978525daff1a777d9e22550 MounikaPalla <mpalla553@gmail.com> 1558873160 +0200	commit: add login page objects
+7899ac1ef73a3706b978525daff1a777d9e22550 a3088999d6d34331929fc40670293221520c672a MounikaPalla <mpalla553@gmail.com> 1558880538 +0200	commit: add scenario outline example
+a3088999d6d34331929fc40670293221520c672a 0eab9537efdd6b25b088f2a73fd04162ea33871a MounikaPalla <mpalla553@gmail.com> 1558882937 +0200	commit: added pages for login, register and account
+0eab9537efdd6b25b088f2a73fd04162ea33871a 4d59bdf56e974b77dc770569f3a7ac2a195a61f5 MounikaPalla <mpalla553@gmail.com> 1558896401 +0200	commit: Add TestNG files to project
+4d59bdf56e974b77dc770569f3a7ac2a195a61f5 9f3c901c1e743115621f05f1bfe04ebd59800db9 MounikaPalla <mpalla553@gmail.com> 1558896607 +0200	commit: add more booking scenarios
+9f3c901c1e743115621f05f1bfe04ebd59800db9 d39ad652609084e4c5d3feb2080dfc453bb895e7 MounikaPalla <mpalla553@gmail.com> 1558903776 +0200	commit: add features for login and register pages
+d39ad652609084e4c5d3feb2080dfc453bb895e7 f6714947deeefeebefe489c97187d9f445fe9365 MounikaPalla <mpalla553@gmail.com> 1558950416 +0200	commit: add reporting dependency for cucumbet
+f6714947deeefeebefe489c97187d9f445fe9365 0acdcde58b014c80338076ab3dce0f70c78d0012 MounikaPalla <mpalla553@gmail.com> 1558950457 +0200	commit: added hooks configuration for test flow and fixing failures
+0acdcde58b014c80338076ab3dce0f70c78d0012 7e6d4d5cbd6431d5d615f7df47b0ff19328bd6f5 MounikaPalla <mpalla553@gmail.com> 1558970554 +0200	commit: add more validations for room change and adults count change
+7e6d4d5cbd6431d5d615f7df47b0ff19328bd6f5 df7c484dc851c5ebcb4ecdcd1e7dad93b77ef409 MounikaPalla <mpalla553@gmail.com> 1558973085 +0200	commit: Test Listener to be implemeneted to integrate framework with other reporting tools
+df7c484dc851c5ebcb4ecdcd1e7dad93b77ef409 67fef6c113de77acf9404e8b4e3ec3424e2675dd MounikaPalla <mpalla553@gmail.com> 1558973128 +0200	commit: todo for all browsers
+67fef6c113de77acf9404e8b4e3ec3424e2675dd a071dd60facac10aafa8464d0201e956d1b68224 MounikaPalla <mpalla553@gmail.com> 1558988925 +0200	commit: implemented parallel execution for features
+a071dd60facac10aafa8464d0201e956d1b68224 3c7f700835cca52f1f83781069b5e224ee03d09e MounikaPalla <mpalla553@gmail.com> 1558990197 +0200	commit: upgrade dependencies from info.cukes to io.cucumber
