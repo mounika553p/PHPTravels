@@ -9,16 +9,16 @@ import static utils.TestBase.properties;
 
 public class LoginPage extends BrowserActions {
 
-    @FindBy(name = "username")
+    @FindBy(name = "email")
     WebElement username;
 
     @FindBy(name = "password")
     WebElement password;
 
-    @FindBy(id = "remember-me")
+    @FindBy(id = "rememberchb")
     WebElement rememberMe;
 
-    @FindBy(css = "[type='submit'].loginbtn")
+    @FindBy(id = "submitBTN")
     WebElement loginButton;
 
     @FindBy(css = ".alert.alert-danger")

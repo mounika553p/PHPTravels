@@ -5,6 +5,9 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static utils.TestBase.*;
 
@@ -51,7 +54,8 @@ public class BrowserActions {
 
     public static boolean thisElementExists(WebElement element) {
         try {
-            //getFluentWait().until(ExpectedConditions.visibilityOf(element));
+//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(element);
             return true;
         }catch(TimeoutException e)
         {

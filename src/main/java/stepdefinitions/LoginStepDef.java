@@ -33,7 +33,7 @@ public class LoginStepDef extends TestBase {
         accountPage = loginPage.clickSubmit();
     }
 
-    @Then("^show invlid email message in login page$")
+    @Then("^show invalid email message in login page$")
     public void showInvlidEmailMessageInLoginPage() {
         loginPage.errorMessageDisplayed();
     }

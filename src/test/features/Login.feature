@@ -6,7 +6,7 @@ Feature:Login to phptravels
   Given booking site is open
   When click on login
   And enter username and password
-  |testphptravel+2@gmail.com|12345678|
+  |testauto.1353@gmail.com|12345678|
   Then user account displayed
 
   @Regression
@@ -15,4 +15,4 @@ Feature:Login to phptravels
     When click on login
     And enter username and password
       |teswrongemail@gmail.com|12345678|
-    Then show invlid email message in login page
+    Then show invalid email message in login page

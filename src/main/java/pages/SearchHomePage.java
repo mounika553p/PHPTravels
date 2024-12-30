@@ -42,13 +42,13 @@ public class SearchHomePage extends BrowserActions {
     @FindBy(css = "[name=fCustomHotelSearch] [type=submit]")
     WebElement searchButton;
 
-    @FindBy(css = ".navbar-default #li_myaccount")
+    @FindBy(xpath = "//*[contains(text(),'Account')]")
     WebElement myAccount;
 
-    @FindBy(css = ".navbar-default #li_myaccount li:nth-child(1)")
+    @FindBy(xpath = "//*[contains(text(),'Login')]")
     WebElement login;
 
-    @FindBy(css = ".navbar-default #li_myaccount li:nth-child(2)")
+    @FindBy(xpath = "//*[contains(text(),'Signup')]")
     WebElement signUp;
 
 
