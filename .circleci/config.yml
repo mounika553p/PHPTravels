@@ -1,15 +1,23 @@
 version: 2.1
 
-executors:
-  docker:
-    # Use a Docker image that includes Java and Maven for running tests
-    - image: maven:3.8.1-jdk-11
+#executors:
+#  # Define the executor with Maven and Selenium Docker images
+#  docker:
+##    - image: maven:3.8.1-jdk-11  # Use Maven to build and test the project
+##    - image: selenium/standalone-chrome:latest  # Selenium container with Chrome
+##      environment:
+##        - DISPLAY=:99  # Set display variable for headless operation
+##        - TZ=UTC  # Set timezone
+
 
 jobs:
   build:
     docker:
       - image: maven:3.8.1-jdk-11  # Use Maven with Java 11 for building your project
       - image: selenium/standalone-chrome:latest  # Use Selenium standalone container with Chrome
+
+#    executor:
+#      name: docker
 
     steps:
       # Checkout the repository to get the test code
