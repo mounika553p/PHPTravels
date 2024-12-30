@@ -20,19 +20,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: create docker network
@@ -46,7 +33,6 @@ jobs:
           name: install selenium-node
           command: docker run -d --rm --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-chrome:3.11.0
 
-      # run tests!
       - run:
           name: run tests
           command: mvn clean test
