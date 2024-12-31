@@ -34,12 +34,8 @@ public class TestBase {
         if (properties.getProperty("browser") == "remote") {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
-//            ChromeOptions options = new ChromeOptions();
-//            options.merge(capabilities);
-
+            System.out.println("Chrome browser Remote selected");
             webDriver = new RemoteWebDriver(hubUrl, capabilities);
-//            WebDriverManager.chromedriver().setup();
-//            webDriver = new ChromeDriver();
             webDriver.manage().timeouts().setScriptTimeout(1, TimeUnit.MINUTES);
             webDriver.manage().timeouts().pageLoadTimeout(1, TimeUnit.MINUTES);
             webDriver.manage().timeouts().implicitlyWait(30, SECONDS);

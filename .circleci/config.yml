@@ -37,10 +37,10 @@ jobs:
           name: run tests
           command: mvn test
 
-  clean:
-    -run:
-      name: remove network
-      command: docker network rm grid
+      - run:
+          name: remove network grid
+          command: docker network rm grid
+
 
   workflows:
     version: 2
