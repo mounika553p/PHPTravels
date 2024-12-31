@@ -9,7 +9,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:7.10
       - image: selenium/standalone-chrome:3.11.0
-      - image: maven:latest
+      - image: maven:3.8.5-openjdk-11
       
       # Specify service dependencies here if necessary  
       # CircleCI maintains a library of pre-built images
@@ -37,4 +37,9 @@ jobs:
       - run:
           name: run tests
           command: mvn clean test
-          
+
+
+  workflows:
+    version: 2
+    jobs:
+      - build
