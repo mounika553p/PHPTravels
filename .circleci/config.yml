@@ -9,7 +9,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:11-jdk-buster
-      - image: selenium/standalone-chrome:3.11.0
+      - image: selenium/standalone-chrome:latest
 
     steps:
       - checkout
