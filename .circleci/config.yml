@@ -15,6 +15,12 @@ jobs:
       - checkout
       - setup_remote_docker
 
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "pom.xml" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
       - run:
           name: create docker network
           command: docker network create grid
@@ -31,8 +37,13 @@ jobs:
           name: run tests
           command: mvn test
 
+  clean:
+    -run:
+      name: remove network
+      command: docker network rm grid
 
   workflows:
     version: 2
-    jobs:
-      - build
+    build_and_test:
+      jobs:
+        - build
