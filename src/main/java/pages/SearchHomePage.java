@@ -45,7 +45,7 @@ public class SearchHomePage extends BrowserActions {
     @FindBy(xpath = "//*[contains(text(),'Account')]")
     WebElement myAccount;
 
-    @FindBy(xpath = "//*[contains(text(),'Login')]")
+    @FindBy(xpath = "//*[contains(text(),'Login junktest')]")
     WebElement login;
 
     @FindBy(xpath = "//*[contains(text(),'Signup')]")
