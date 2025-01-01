@@ -29,17 +29,20 @@ public class TestBase {
 
     public static void setDriver() throws MalformedURLException {
         WebDriver webDriver;
-        URL hubUrl = new URL("http://selenium-hub:4444/wd/hub"); // URL of the Selenium Hub container
+        URL hubUrl = new URL("http://localhost:4444/"); // URL of the Selenium Hub container
 
         if (properties.getProperty("browser").equals("remote")) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
-            System.out.println("Chrome browser Remote selected");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--incognito");
             options.addArguments("--disable-dev-shm-usage");
             capabilities.setCapability(ChromeOptions.CAPABILITY,options);
             webDriver = new RemoteWebDriver(hubUrl,capabilities);
+            webDriver.manage().timeouts().setScriptTimeout(1, TimeUnit.MINUTES);
+            webDriver.manage().timeouts().pageLoadTimeout(1, TimeUnit.MINUTES);
+            webDriver.manage().timeouts().implicitlyWait(30, SECONDS);
+            webDriver.manage().window().maximize();
         }else if(properties.getProperty("browser").equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             webDriver = new ChromeDriver();
