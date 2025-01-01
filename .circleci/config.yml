@@ -35,11 +35,11 @@ jobs:
 
       - run:
           name: pull docker image
-          command: docker pull --platform linux/amd64 selenium/standalone-chrome:latest
+          command: docker pull selenium/standalone-chrome:latest
 
       - run:
           name: run selenium chrome docker
-          command: docker run -d -p 4444:4444 --shm-size="2g" --platform linux/amd64 selenium/standalone-chrome:latest
+          command: docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:latest
 
       - run:
           name: run tests
